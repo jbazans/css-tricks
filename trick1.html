@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trick 1</title>
+	<style type="text/css">
+		body,html{
+			margin: 0;
+			padding: 0;
+			background: #333;
+			margin-top: 50px;
+		}
+		.content-main{
+			margin: auto;
+			width: 400px;
+			position: relative;
+		}
+		.window-product{
+			padding: 10px;
+			width: calc(100% - 20px);
+			background: #666;
+			position: relative;
+			border-radius: 10px;
+		}
+		.img-class{
+			width: 100%;
+		}
+		.window-description{
+			padding: 0px 10px;
+			width: calc(100% - 20px);
+			background: #128ed6a6;
+			/*COLOR SKYBLUE TRANSAPARENT*/
+			color: #fff;
+			font-family: sans-serif;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align: center;
+			height: 0%;
+			border-radius: 10px;
+			transition: 1s;
+		}
+		.content-description{
+			opacity: 0;
+			transition: 1s;
+		}
+		.item-title{
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+		.item-subtitle{
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		.item-price{
+			font-size: 35px;
+			margin-bottom: 20px;
+		}
+		.button-class{
+			border-style: none;
+			background: #0966d8;
+			color:#fff;
+			padding: 15px 20px;
+			font-size: 20px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.button-class:hover{
+			background: #0c376b;
+		}
+	</style>
+</head>
+<body>
+	<div class="content-main">
+		<div class="window-product" id="product1">
+			<img src="assets/item.jpg" class="img-class">
+		</div>
+		<div class="window-description" id="detail1">
+			<div class="content-description" id="part-detail1">
+				<div class="item-title">Courier Dota 2 -Game</div>
+				<div class="item-subtitle">Plushy</div>
+				<div class="item-price">$ 25.00</div>
+				<button class="button-class">Show more</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function(){
+			// show animation
+			document.getElementById("product1").addEventListener('mouseover',function(){
+				document.getElementById("detail1").style.padding="90px 10px 10px 10px";
+				document.getElementById("detail1").style.height="calc(100% - 100px)";
+				document.getElementById("part-detail1").style.opacity="1";
+			});
+			// hide animation
+			document.getElementById("detail1").addEventListener('mouseleave',function(){
+				document.getElementById("detail1").style.padding="0px 10px";
+				document.getElementById("detail1").style.height="0%";
+				document.getElementById("part-detail1").style.opacity="0";
+			});
+		})();
+		// that´s all folks ;)
+	</script>
+</body>
+</html>
