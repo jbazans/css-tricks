@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trick 3</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		body,html{
+			margin: 0;
+			padding: 0;
+			background: #eee;
+			color: #fff;
+			font-family: cursive;
+		}
+		.header-content{
+			padding: 10px;
+			width: calc(100% - 20px);
+			background: #2691d0;
+			height: 30px;
+			position: fixed;
+			top:0;
+			left: 0;
+			display: flex;
+		}
+		.content-logo{
+			width: 200px;
+			line-height: 30px;
+		}
+		.logo{
+			font-size: 22px;
+			font-weight: bold;
+		}
+		.content-menu{
+			width: calc(100% - 200px);
+			justify-content: flex-end;
+			display: flex;
+			line-height: 30px;
+		}
+		.item-menu{
+			width: auto;
+			padding: 0px 10px;
+			cursor: pointer;
+			display: flex;
+		}
+		.item-menu-icon{
+			font-size: 26px;
+			width: 30px;
+			text-align: center;
+		}
+		.item-menu-text{
+			overflow: hidden;
+			width: 0px;
+			opacity: 0;
+			transition: 1s;
+		}
+		.main-content{
+			padding: 10px;
+			height: calc(100% - 70px);
+			margin-top: 50px;
+			width: calc(100% - 20px);
+		}
+		.title-content{
+			color: #666;
+			font-size: 20px;
+		}
+		.lateral-line{
+			border-left: 2px solid #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="header-content">
+		<div class="content-logo">
+			<div class="logo">TRICK #3</div>
+		</div>
+		<div class="content-menu">
+			<div class="item-menu" onmouseover="show_text(1)" onmouseleave="hide_text(1)">
+				<div class="item-menu-icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+				<div class="item-menu-text" id="text-1">Home</div>
+			</div>
+			<div class="item-menu lateral-line" onmouseover="show_text(2)" onmouseleave="hide_text(2)">
+				<div class="item-menu-icon"><i class="fa fa-rss" aria-hidden="true"></i></div>
+				<div class="item-menu-text" id="text-2">Blog</div>
+			</div>
+			<div class="item-menu lateral-line" onmouseover="show_text(3)" onmouseleave="hide_text(3)">
+				<div class="item-menu-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
+				<div class="item-menu-text" id="text-3">Sign Out</div>
+			</div>
+		</div>
+	</div>
+	<!--ONLY FOR FILL CONTENT-->
+	<div class="main-content">
+		<div class="title-content">Here goes your content!</div>
+	</div>
+	<!--NOW ANIMATION-->
+	<script type="text/javascript">
+		function show_text(id){
+			document.getElementById("text-"+id).style.width="auto";
+			document.getElementById("text-"+id).style.opacity="1";
+		}
+		function hide_text(id){
+			document.getElementById("text-"+id).style.opacity="0";
+			document.getElementById("text-"+id).style.width="0px";
+		}
+	</script>
+</body>
+</html>

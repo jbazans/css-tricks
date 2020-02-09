@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+GET THIS ON https://fontawesome.com/v4.7.0/icons/
+<i class="fa fa-home" aria-hidden="true"></i>
+<i class="fa fa-rss" aria-hidden="true"></i>
+<i class="fa fa-sign-out" aria-hidden="true"></i>
