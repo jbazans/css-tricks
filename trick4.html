@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trick #4</title>
+	<style type="text/css">
+		body,html{
+			background: #333;
+			margin: 0;
+			padding: 0;
+			font-family: cursive;
+		}
+		.main-content{
+			max-width: 1200px;
+			display: flex;
+			margin: auto;
+			margin-top: 50px;
+		}
+		.card{
+			padding: 10px;
+			width: calc(100% / 3 - 20px);
+			color: white;
+		}
+		.card-content{
+			width: 100%;
+			text-align: center;
+			display: flex;
+			position: relative;
+			height: 200px;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		.card-part1{
+			padding: 10px;
+			width: calc(100% - 20px);
+			font-size: 30px;
+			background: #666;
+			border-radius: 10px;
+			position: absolute;
+			left: 0%;
+			height: 180px;
+			line-height: 90px;
+			transition: 0.5s;
+		}
+		.card-part2{
+			position: absolute;
+			left: -100%;
+			font-size: 25px;
+			padding: 10px;
+			width: calc(100% - 20px);
+			background: #0e92de;
+			border-radius: 10px;
+			height: 180px;
+			line-height: 60px;
+			transition: 0.5s;
+		}
+		.card-content:hover .card-part1{
+			left: 100%;			
+		}
+		.card-content:hover .card-part2{
+			left: 0%;			
+		}
+	</style>
+</head>
+<body>
+	<div class="main-content">
+		<div class="card">
+			<div class="card-content">
+				<div class="card-part2">Mi name is Jose Bazan and i am starting at youtube :)</div>
+				<div class="card-part1">Hi, this is a presentation</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-content">
+				<div class="card-part2">Mi name is Jose Bazan and i am starting at youtube :)</div>
+				<div class="card-part1">Hi, this is a presentation</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-content">
+				<div class="card-part2">Mi name is Jose Bazan and i am starting at youtube :)</div>
+				<div class="card-part1">Hi, this is a presentation</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
